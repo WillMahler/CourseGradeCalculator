@@ -7,7 +7,7 @@
     tools:context=".CourseInformation">
 
     <Button
-        android:id="@+id/addEvaluationButton"
+        android:id="@+id/addCourseButton_FromCourseInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
