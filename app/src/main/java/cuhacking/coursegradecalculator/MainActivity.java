@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> courseList = new ArrayList<String>();
 
-        courseList.add("COURSE 1");
-        courseList.add("COURSE 1");
-        courseList.add("COURSE 1");
-        courseList.add("COURSE 1");
-        courseList.add("COURSE 1");
-        courseList.add("COURSE 1");
+        courseList.add("Course 0");
 
         addCourseButtonFromMain = findViewById(R.id.addCourseButton_FromMain);
 
@@ -38,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
         ListView courseListView = findViewById(R.id.courseListView);
 
-//        courseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                System.out.println(position);
-//                Intent intent = new Intent(MainActivity.this, AddCourse.class);
-//                startActivity(intent);
-//            }
-//        });
+        courseListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                System.out.println(position);
+                Intent intent = new Intent(MainActivity.this, CourseInformation.class);
+                startActivity(intent);
+            }
+        });
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,
                 courseList);
 
